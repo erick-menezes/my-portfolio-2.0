@@ -31,12 +31,11 @@ html {
 
 body, input, textarea, button {
     font-family: 'Karla', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
     font-weight: 400;
 }
 
-body {
-    position: relative;
+html, #__next {
     min-height: 100vh;
 }
 
