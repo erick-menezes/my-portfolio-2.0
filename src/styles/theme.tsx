@@ -30,7 +30,7 @@ export const theme = extendTheme({
             primary: '#FD2A2A',
             secondary: {
                 default: '#FFFFFF',
-                __dark: 'red.600',
+                __dark: '#201E1F',
             },
         },
     },
@@ -39,7 +39,7 @@ export const theme = extendTheme({
     */
     styles: {
         global: (props: StyleFunctionProps) => ({
-            body: {
+            'body': {
                 bg: mode('white', '#201E1F')(props),
                 color: mode('#49484F', 'white')(props),
             },

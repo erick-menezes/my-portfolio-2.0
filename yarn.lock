@@ -1780,6 +1780,11 @@ find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
+flag-icons@^6.6.4:
+  version "6.6.4"
+  resolved "https://registry.yarnpkg.com/flag-icons/-/flag-icons-6.6.4.tgz#e1ee37b2dd946fb576bbf7586814ed3eedcee7ae"
+  integrity sha512-hRRXKw3f5F2OCcDTOTXO0tc3ODqBx/ttA61V9mqy/hVbnFXzW+7tJMLQ+xd77+BXwdUzQAMLW2G4RZqqvaN3Mg==
+
 flat-cache@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.0.4.tgz#61b0338302b2fe9f957dcc32fc2a87f1c3048b11"
@@ -2311,6 +2316,11 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
+
+next-translate@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.5.0.tgz#b1e5c4a8e55e31b3ed1b9428529f27c289c6b7bc"
+  integrity sha512-6amnuJWw22XbaM2DVhsYaOXelFLjTbMqTgqvB+h9VfE/H2aQ/edfT06ONQLQbsVV/I7Hn+93LTaV1/qOo6Kf9A==
 
 next@12.2.2:
   version "12.2.2"

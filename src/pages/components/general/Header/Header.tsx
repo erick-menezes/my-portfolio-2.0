@@ -1,20 +1,28 @@
-import Image from "next/image";
+import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import {
     Box,
-    // Button,
     Flex,
     useBreakpointValue,
+    useDisclosure,
 } from "@chakra-ui/react";
 import { Icon } from '@iconify/react';
 
 import AppLogoImage from "assets/images/AppLogoImage.png";
 
-import styles from './Header.module.scss';
 import { NavbarContentOptions } from "./NavbarContentOptions";
+import { NavbarDrawerContent } from "./NavbarDrawerContent";
+import { AccessibilityOptions } from "./AccessibilityOptions";
+
+import styles from './Header.module.scss';
 
 export function Header() {
+    const buttonRef = useRef(null);
     const isMobileSize = useBreakpointValue({ base: true, lg: false });
+
+    const { isOpen, onClose, onToggle } = useDisclosure();
 
     return (
         <Flex
@@ -34,32 +42,25 @@ export function Header() {
                 </Box>
             </Link>
 
-            {/* <Button onClick={toggleColorMode}>
-                Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-            </Button> */}
-
             {isMobileSize ? (
-                <Icon
-                    icon="ant-design:menu-outlined"
-                    color="#fd2a2a"
-                    fontSize={18}
-                />
+                <>
+                    <Icon
+                        icon="ant-design:menu-outlined"
+                        color="#fd2a2a"
+                        fontSize={18}
+                        ref={buttonRef}
+                        onClick={onToggle}
+                    />
+                    <NavbarDrawerContent
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        btnRef={buttonRef}
+                    />
+                </>
             ) : (
                 <Flex alignItems="center" justifyContent="center" columnGap={5}>
                     <NavbarContentOptions />
-                    <Icon
-                        icon="clarity:sun-solid"
-                        color="#F9DC5C"
-                        fontSize={25}
-                    />
-                    <Flex color="app-blue" columnGap={2} cursor="pointer">
-                        <Icon
-                            icon="akar-icons:globe"
-                            color="#4BA3C3"
-                            fontSize={25}
-                        />
-                        Português (Brasil)
-                    </Flex>
+                    <AccessibilityOptions />
                 </Flex>
             )}
         </Flex>

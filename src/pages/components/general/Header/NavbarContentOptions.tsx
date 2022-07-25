@@ -1,50 +1,66 @@
 import { useRouter } from "next/router";
+import useTranslation from 'next-translate/useTranslation';
 
-import { Flex } from "@chakra-ui/react";
+import { Flex, useBreakpointValue } from "@chakra-ui/react";
 
 import { NavbarContentLink } from "./NavbarContentLink";
 
 type MenuOptionType = {
     navigateTo: string;
+    activateStyleOn?: string[];
+    externalLink?: boolean;
     optionName: string;
 }
 
 export function NavbarContentOptions() {
     const router = useRouter();
+    const isMobileSize = useBreakpointValue({ base: true, lg: false });
+    const { t } = useTranslation('landing');
 
     const menuOptions: MenuOptionType[] = [
         {
             navigateTo: "/",
-            optionName: "INÍCIO",
+            activateStyleOn: ["/"],
+            optionName: t('menuOptions.homeOption'),
         },
         {
             navigateTo: "/#about",
-            optionName: "SOBRE MIM",
+            activateStyleOn: ["/#about"],
+            optionName: t('menuOptions.aboutOption'),
         },
         {
             navigateTo: "/#projects",
-            optionName: "PROJETOS",
+            activateStyleOn: ["/#projects", "/project-explorer"],
+            optionName: t('menuOptions.projectOption'),
         },
         {
-            navigateTo: "#",
-            optionName: "CURRÍCULO",
+            navigateTo: "https://github.com/erick-menezes",
+            externalLink: true,
+            optionName: t('menuOptions.resumeOption'),
         },
     ];
+
 
     return (
         <Flex>
             <Flex
                 as="ul"
                 listStyleType="none"
-                columnGap={5}
+                columnGap={isMobileSize ? 0 : 5}
+                rowGap={isMobileSize ? 8 : 0}
+                flexDirection={isMobileSize ? 'column' : 'row'}
+                alignItems="center"
+                justifyContent="center"
                 fontWeight="500"
+                width="100%"
             >
                 {menuOptions.map((option, index) => (
                     <NavbarContentLink
                         key={index}
-                        isActive={router.asPath === option.navigateTo}
+                        isActive={option.activateStyleOn?.includes(router.asPath)}
                         navigateTo={option.navigateTo}
                         optionName={option.optionName}
+                        externalLink={option?.externalLink}
                     />
                 ))}
             </Flex>

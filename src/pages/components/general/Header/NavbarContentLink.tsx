@@ -1,21 +1,26 @@
 import Link from "next/link";
 
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, List, useColorModeValue } from "@chakra-ui/react";
 
 interface NavbarContentLinkProps {
     isActive?: boolean;
     navigateTo: string;
     optionName: string;
+    externalLink?: boolean;
 }
 
-export function NavbarContentLink({ isActive, navigateTo, optionName }: NavbarContentLinkProps) {
+export function NavbarContentLink({ isActive, navigateTo, optionName, externalLink }: NavbarContentLinkProps) {
     const colorMode = useColorModeValue('app-secondary-dark.500', 'white');
 
     return (
-        <li style={{ color: isActive ? '#FD2A2A' : colorMode }}>
-            <Link href={navigateTo}>
-                {optionName}
-            </Link>
+        <List color={isActive ? '#FD2A2A' : colorMode }>
+            {externalLink ? (
+                <a href={navigateTo} target="_blank" rel="noreferrer">{optionName}</a>
+            ) : (
+                <Link href={navigateTo}>
+                    {optionName}
+                </Link>
+            )}
             {isActive && (
                 <Box
                     width="100%"
@@ -24,6 +29,6 @@ export function NavbarContentLink({ isActive, navigateTo, optionName }: NavbarCo
                     background="app-primary"
                 />
             )}
-        </li>
+        </List>
     );
 }

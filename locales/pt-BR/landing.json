@@ -1,0 +1,14 @@
+{
+    "switchDarkModeText": "Trocar para modo escuro",
+    "switchLightModeText": "Trocar para modo claro",
+    "languagesOptions": {
+        "pt-BR": "Português (Brasil)",
+        "en-US": "Inglês"
+    },
+    "menuOptions": {
+        "homeOption": "INÍCIO",
+        "aboutOption": "SOBRE MIM",
+        "projectOption": "PROJETOS",
+        "resumeOption": "CURRÍCULO"
+    }
+}
