@@ -2,8 +2,13 @@ import { extendTheme } from '@chakra-ui/react';
 import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
 
 export const theme = extendTheme({
+    space: {
+        85: '21.25rem',
+        90: '22.5rem',
+    },
     colors: {
         "app-primary": "#FD2A2A",
+        "app-primary-darken": "#F20202",
         "app-secondary-light": "#FFFFFF",
         "app-secondary-dark": {
             500: "#49484F",

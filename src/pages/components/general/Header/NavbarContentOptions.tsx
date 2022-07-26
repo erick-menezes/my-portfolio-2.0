@@ -34,7 +34,7 @@ export function NavbarContentOptions() {
             optionName: t('menuOptions.projectOption'),
         },
         {
-            navigateTo: "https://github.com/erick-menezes",
+            navigateTo: "/files/resume.pdf",
             externalLink: true,
             optionName: t('menuOptions.resumeOption'),
         },

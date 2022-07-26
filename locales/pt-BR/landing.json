@@ -10,5 +10,11 @@
         "aboutOption": "SOBRE MIM",
         "projectOption": "PROJETOS",
         "resumeOption": "CURRÍCULO"
+    },
+    "landingCover": {
+        "h1_1": "Olá",
+        "h1_2": "eu sou Erick",
+        "span1": "um",
+        "span2": "Desenvolvedor Full Stack"
     }
 }

@@ -29,7 +29,16 @@ html {
     }
 }
 
-body, input, textarea, button {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+button {
     font-family: 'Karla', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
     font-weight: 400;
