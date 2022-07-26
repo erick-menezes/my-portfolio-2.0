@@ -10,7 +10,7 @@ import SelfImage from 'assets/images/me.jpg';
 export function LandingCover() {
     const { t } = useTranslation('landing');
     const isMobileSize = useBreakpointValue({ base: true, lg: false });
-    const columnGapSize = useBreakpointValue({ base: 0, md: 32 });
+    const columnGapSize = useBreakpointValue({ base: 0, lg: 28, xl: 80 });
 
     return (
         <Flex
@@ -42,7 +42,7 @@ export function LandingCover() {
                     <span style={{ color: '#FD2A2A', fontSize: '1.2rem' }}>{t('landingCover.span2')}.</span>
                 </Heading>
 
-                <a href="/files/resume.pdf" target="_blank">
+                <a href="/files/resume.pdf" target="_blank" style={{ width: "fit-content" }}>
                     <StyledButton
                         text="CURRÍCULO"
                         iconName="carbon:document"

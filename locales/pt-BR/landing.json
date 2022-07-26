@@ -16,5 +16,16 @@
         "h1_2": "eu sou Erick",
         "span1": "um",
         "span2": "Desenvolvedor Full Stack"
+    },
+    "aboutMeSection": {
+        "title": "SOBRE MIM",
+        "paragraph1": "Sou um brasileiro nascido no Rio de Janeiro apaixonado por programação e jogos. Meu maior objetivo é ajudar o máximo possível de pessoas com as minhas habilidades no Desenvolvimento Web, passando meu conhecimento adiante e resolvendo problemas reais com meus aplicativos, trazendo ótimas experiências para os usuários que o utilizarem.",
+        "paragraph2": "Quando não estou programando, muito provavelmente estou jogando, ouvindo músicas, assistindo vídeos/lives ou saindo com os amigos."
+    },
+    "projectsSection": {
+        "title": "PROJETOS"
+    },
+    "skillsSection": {
+        "title": "SKILLS"
     }
 }

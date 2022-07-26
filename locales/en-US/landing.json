@@ -16,5 +16,16 @@
         "h1_2": "I'm Erick",
         "span1": "a",
         "span2": "Full Stack Developer"
+    },
+    "aboutMeSection": {
+        "title": "ABOUT ME",
+        "paragraph1": "I'm a brazilian born in Rio de Janeiro passionate about programming and games. My biggest goal is to help as many people as possible with my skills in Web Development, passing on my knowledge and solving real problems with my apps, bringing great experiences to users who use it.",
+        "paragraph2": "When I'm not programming, I'm most likely playing games, listening to music, watching videos/lives or hanging out with friends."
+    },
+    "projectsSection": {
+        "title": "PROJECTS"
+    },
+    "skillsSection": {
+        "title": "SKILLS"
     }
 }
