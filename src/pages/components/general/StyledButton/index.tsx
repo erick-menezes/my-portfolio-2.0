@@ -19,7 +19,8 @@ export function StyledButton({ text, iconName, ...rest }: StyledButtonProps) {
             background="app-primary"
             alignItems="center"
             alignSelf={isMobileSize ? 'center' : 'start'}
-            justifyContent={iconName ? 'space-between' : 'center'}
+            justifyContent={'center'}
+            columnGap={5}
             color="app-secondary-light"
             fontSize={isMobileSize ? 13 : 15}
             paddingInline={isMobileSize ? 12 : 9}

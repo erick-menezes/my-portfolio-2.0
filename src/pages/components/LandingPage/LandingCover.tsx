@@ -44,7 +44,7 @@ export function LandingCover() {
 
                 <a href="/files/resume.pdf" target="_blank" style={{ width: "fit-content" }}>
                     <StyledButton
-                        text="CURRÍCULO"
+                        text={t('menuOptions.resumeOption')}
                         iconName="carbon:document"
                     />
                 </a>

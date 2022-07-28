@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 import { SectionTitle } from "../general/SectionTitle";
 
@@ -13,6 +13,7 @@ export function AboutMeSection() {
             id="about"
             flexDirection="column"
             rowGap={10}
+            paddingTop={10}
         >
             <SectionTitle title={t('aboutMeSection.title')} />
             <Flex>
