@@ -22,7 +22,7 @@ interface ToggleLanguageButtonProps {
 }
 
 export function ToggleLanguageButton({ selectPosition }: ToggleLanguageButtonProps) {
-    const { t, lang } = useTranslation('landing') as LanguageType;
+    const { t, lang } = useTranslation('header') as LanguageType;
     const { isOpen, onClose, onToggle } = useDisclosure();
     const languageSelectRef = useRef<HTMLDivElement | null>(null);
 

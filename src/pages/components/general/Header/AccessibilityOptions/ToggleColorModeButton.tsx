@@ -5,7 +5,7 @@ import { Tooltip, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 
 export function ToggleColorModeButton() {
-    const { t } = useTranslation('landing');
+    const { t } = useTranslation('header');
     const switchLabelText = useColorModeValue(t('switchDarkModeText'), t('switchLightModeText'));
     const { colorMode, toggleColorMode } = useColorMode();
 

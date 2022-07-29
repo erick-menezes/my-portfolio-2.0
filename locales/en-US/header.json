@@ -1,0 +1,14 @@
+{
+    "switchDarkModeText": "Switch to dark mode",
+    "switchLightModeText": "Switch to light mode",
+    "languagesOptions": {
+        "pt-BR": "Portuguese (Brazil)",
+        "en-US": "English"
+    },
+    "menuOptions": {
+        "homeOption": "HOME",
+        "aboutOption": "ABOUT ME",
+        "projectOption": "PROJECTS",
+        "resumeOption": "RESUME"
+    }
+}

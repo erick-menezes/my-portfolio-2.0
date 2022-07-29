@@ -1,21 +1,10 @@
 {
-    "switchDarkModeText": "Switch to dark mode",
-    "switchLightModeText": "Switch to light mode",
-    "languagesOptions": {
-        "pt-BR": "Portuguese (Brazil)",
-        "en-US": "English"
-    },
-    "menuOptions": {
-        "homeOption": "HOME",
-        "aboutOption": "ABOUT ME",
-        "projectOption": "PROJECTS",
-        "resumeOption": "RESUME"
-    },
     "landingCover": {
         "h1_1": "Hi",
         "h1_2": "I'm Erick",
         "span1": "a",
-        "span2": "Full Stack Developer"
+        "span2": "Full Stack Developer",
+        "resumeButtonText": "RESUME"
     },
     "aboutMeSection": {
         "title": "ABOUT ME",
@@ -23,7 +12,8 @@
         "paragraph2": "When I'm not programming, I'm most likely playing games, listening to music, watching videos/lives or hanging out with friends."
     },
     "projectsSection": {
-        "title": "PROJECTS"
+        "title": "PROJECTS",
+        "linkText": "See more"
     },
     "skillsSection": {
         "title": "SKILLS"

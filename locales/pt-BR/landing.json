@@ -1,21 +1,10 @@
 {
-    "switchDarkModeText": "Trocar para modo escuro",
-    "switchLightModeText": "Trocar para modo claro",
-    "languagesOptions": {
-        "pt-BR": "Português (Brasil)",
-        "en-US": "Inglês"
-    },
-    "menuOptions": {
-        "homeOption": "INÍCIO",
-        "aboutOption": "SOBRE MIM",
-        "projectOption": "PROJETOS",
-        "resumeOption": "CURRÍCULO"
-    },
     "landingCover": {
         "h1_1": "Olá",
         "h1_2": "eu sou Erick",
         "span1": "um",
-        "span2": "Desenvolvedor Full Stack"
+        "span2": "Desenvolvedor Full Stack",
+        "resumeButtonText": "CURRÍCULO"
     },
     "aboutMeSection": {
         "title": "SOBRE MIM",
@@ -23,7 +12,8 @@
         "paragraph2": "Quando não estou programando, muito provavelmente estou jogando, ouvindo músicas, assistindo vídeos/lives ou saindo com os amigos."
     },
     "projectsSection": {
-        "title": "PROJETOS"
+        "title": "PROJETOS",
+        "linkText": "Ver mais"
     },
     "skillsSection": {
         "title": "SKILLS"

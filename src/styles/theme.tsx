@@ -11,6 +11,7 @@ export const theme = extendTheme({
         "app-primary-darken": "#F20202",
         "app-secondary-light": "#FFFFFF",
         "app-secondary-dark": {
+            400: "#62616B",
             500: "#49484F",
             600: "#272526",
             700: "#201E1F",

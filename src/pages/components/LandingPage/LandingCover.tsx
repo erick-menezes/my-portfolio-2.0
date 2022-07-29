@@ -42,9 +42,9 @@ export function LandingCover() {
                     <span style={{ color: '#FD2A2A', fontSize: '1.2rem' }}>{t('landingCover.span2')}.</span>
                 </Heading>
 
-                <a href="/files/resume.pdf" target="_blank" style={{ width: "fit-content" }}>
+                <a href="/files/resume.pdf" target="_blank" style={{ width: "fit-content", alignSelf: isMobileSize ? "center" : "inherit" }}>
                     <StyledButton
-                        text={t('menuOptions.resumeOption')}
+                        text={t('landingCover.resumeButtonText')}
                         iconName="carbon:document"
                     />
                 </a>

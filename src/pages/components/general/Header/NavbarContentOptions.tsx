@@ -15,7 +15,7 @@ type MenuOptionType = {
 export function NavbarContentOptions() {
     const router = useRouter();
     const isMobileSize = useBreakpointValue({ base: true, lg: false });
-    const { t } = useTranslation('landing');
+    const { t } = useTranslation('header');
 
     const menuOptions: MenuOptionType[] = [
         {
@@ -30,7 +30,7 @@ export function NavbarContentOptions() {
         },
         {
             navigateTo: "/#projects",
-            activateStyleOn: ["/#projects", "/project-explorer"],
+            activateStyleOn: ["/#projects"],
             optionName: t('menuOptions.projectOption'),
         },
         {
