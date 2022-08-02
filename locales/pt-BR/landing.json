@@ -16,6 +16,11 @@
         "linkText": "Ver mais"
     },
     "skillsSection": {
-        "title": "SKILLS"
+        "title": "SKILLS",
+        "paragraph": "Tecnologias/Ferramentas que utilizo ou já utilizei durante a minha carreira:",
+        "skillType1": "Design/Prototyping",
+        "skillType2": "Development",
+        "skillType3": "Database",
+        "skillType4": "DevOps"
     }
 }

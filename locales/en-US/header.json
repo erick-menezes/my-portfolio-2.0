@@ -9,6 +9,7 @@
         "homeOption": "HOME",
         "aboutOption": "ABOUT ME",
         "projectOption": "PROJECTS",
+        "skillsOption": "SKILLS",
         "resumeOption": "RESUME"
     }
 }

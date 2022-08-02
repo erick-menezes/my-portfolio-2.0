@@ -34,6 +34,11 @@ export function NavbarContentOptions() {
             optionName: t('menuOptions.projectOption'),
         },
         {
+            navigateTo: "/#skills",
+            activateStyleOn: ["/#skills"],
+            optionName: t('menuOptions.skillsOption'),
+        },
+        {
             navigateTo: "/files/resume.pdf",
             externalLink: true,
             optionName: t('menuOptions.resumeOption'),

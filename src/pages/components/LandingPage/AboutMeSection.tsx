@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 import { SectionTitle } from "../general/SectionTitle";
 
@@ -18,8 +18,8 @@ export function AboutMeSection() {
             <SectionTitle title={t('aboutMeSection.title')} />
             <Flex>
                 <Flex maxWidth="800px" flexDirection="column" rowGap={6}>
-                    <p>{t('aboutMeSection.paragraph1')}</p>
-                    <p>{t('aboutMeSection.paragraph2')}</p>
+                    <Text fontSize="lg">{t('aboutMeSection.paragraph1')}</Text>
+                    <Text fontSize="lg">{t('aboutMeSection.paragraph2')}</Text>
                 </Flex>
                 {/* Inserir uma imagem minha aqui */}
             </Flex>

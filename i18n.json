@@ -2,7 +2,7 @@
     "locales": ["en-US", "pt-BR"],
     "defaultLocale": "pt-BR",
     "pages": {
-        "*": ["header"],
+        "*": ["header", "footer"],
         "/": ["landing"]
     }
 }
