@@ -7,54 +7,35 @@
 
 ### Front-End:
 - HTML, CSS and JavaScript/TypeScript
-- TailwindCSS
+- Sass
+- Chakra UI
 - ReactJS
 - NextJS
 
 ### Back-End:
 - JavaScript
-- NestJS
-- GraphQL
-- SQL Server
+- MirageJS
 
 ## Production implementation
 
 Not implemented yet.
 
-## Executing the project (Front-End):
+## Executing the project:
 
 **Prerequisite: Node.js LTS**
 
 ```
 # Clone repository
-git clone https://github.com/erick-menezes/my-portfolio
+git clone https://github.com/erick-menezes/my-portfolio-2.0
 
 # Access the folder
-cd my-portfolio/web
+cd my-portfolio-2.0
 
 # Install the dependencies
 yarn install
 
 # Execute the project
 yarn dev
-```
-
-## Executing the project (Back-End):
-
-**Prerequisite: Node.js LTS**
-
-```
-# Clone repository
-git clone https://github.com/erick-menezes/my-portfolio
-
-# Access the folder
-cd my-portfolio/server
-
-# Install the dependencies
-yarn install
-
-# Execute the project
-yarn start or yarn start:dev (for hot-reloading)
 ```
 
 ## Author
