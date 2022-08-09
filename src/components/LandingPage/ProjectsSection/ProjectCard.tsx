@@ -1,9 +1,9 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import { Flex, GridItem, SlideFade, Text, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
 
 interface ProjectCardProps {
-    coverImage: StaticImageData;
+    coverImage: string;
     imageAlt: string;
     projectName: string;
     technologies: string[];

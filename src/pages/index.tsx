@@ -1,10 +1,10 @@
 import { Flex } from '@chakra-ui/react';
 
-import { HeadContent } from './components/HeadContent';
-import { LandingCover } from './components/LandingPage/LandingCover';
-import { AboutMeSection } from './components/LandingPage/AboutMeSection';
-import { ProjectsSection } from './components/LandingPage/ProjectsSection';
-import { SkillsSection } from './components/LandingPage/SkillsSection';
+import { HeadContent } from 'components/HeadContent';
+import { LandingCover } from 'components/LandingPage/LandingCover';
+import { AboutMeSection } from 'components/LandingPage/AboutMeSection';
+import { ProjectsSection } from 'components/LandingPage/ProjectsSection';
+import { SkillsSection } from 'components/LandingPage/SkillsSection';
 
 export default function Home() {
     return (
