@@ -1,7 +1,13 @@
 
 import { Flex, Text, Tooltip } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
-import { TechnologyType } from ".";
+
+export type TechnologyType = {
+    id: number,
+    name: string,
+    categoryId: number,
+    iconName: string,
+}
 
 interface ListSectionProps {
     listTitle: string;
