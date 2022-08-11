@@ -51,6 +51,7 @@ export function LanguageSwitchSelect({ languages, onClose, onChangeLanguage, lan
             bottom={selectPosition === 'bottom' ? -125 : ''}
             top={selectPosition === 'bottom' ? '' : -115}
             right={0}
+            zIndex={9999}
             background={selectColorStyle.background}
             borderRadius={5}
             border={`1px solid ${selectColorStyle.border}`}

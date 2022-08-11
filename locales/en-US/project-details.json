@@ -1,0 +1,19 @@
+{
+    "generalDetails": {
+        "project": "PROJECT",
+        "role": "ROLE",
+        "duration": "DURATION",
+        "fullstack": "Full Stack Developer",
+        "frontend": "Front-End Developer",
+        "backend": "Back-End Developer"
+    },
+    "projectDescription": "PROJECT DESCRIPTION",
+    "goal": "GOAL",
+    "tools&technologies": "TOOLS/TECHNOLOGIES",
+    "links": {
+        "title": "LINKS",
+        "repository": "REPOSITORY",
+        "site": "SITE",
+        "no-project": "There is no link for this project."
+    }
+}

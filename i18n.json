@@ -3,6 +3,7 @@
     "defaultLocale": "pt-BR",
     "pages": {
         "*": ["header", "footer"],
-        "/": ["landing"]
+        "/": ["landing"],
+        "/project-details/[project]": ["project-details"]
     }
 }

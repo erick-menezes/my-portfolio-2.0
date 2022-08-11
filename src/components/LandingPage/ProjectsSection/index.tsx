@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
-import { landingMainProjects, technologies } from "services/data";
+import { landingMainProjects } from "services/data";
 
 import { Button, Flex, Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 
 import { SectionTitle } from "components/general/SectionTitle";
 import { ProjectCard } from "./ProjectCard";
+import { getFormattedTechnologyNamesByProject } from "utils/functions";
 
 export function ProjectsSection() {
     const router = useRouter();
@@ -18,9 +19,9 @@ export function ProjectsSection() {
         router.push('/project-explorer');
     }
 
-    function getTechnologyNamesByProject(projectTechnologiesIds: number[]) {
-        const currentProjectTechnologies = technologies.filter((technology) => projectTechnologiesIds.includes(technology.id));
-        const technologyNames = currentProjectTechnologies.map((technology) => technology.name.toLowerCase());
+    function getTechnologyNames(technologyIds: number[]) {
+        const projectTechnologies = getFormattedTechnologyNamesByProject({ technologyIds, formatToLowerCase: true });
+        const technologyNames = projectTechnologies.map((technology) => technology.name);
 
         return technologyNames;
     }
@@ -48,7 +49,8 @@ export function ProjectsSection() {
                         coverImage={project.imagePath}
                         imageAlt={project.imageAlt}
                         projectName={project.name}
-                        technologies={getTechnologyNamesByProject(project.technologyIds)}
+                        projectSlugUrl={project.slugName}
+                        technologies={getTechnologyNames(project.technologyIds)}
                     />
                 ))}
 

@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 import { Flex, GridItem, SlideFade, Text, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
@@ -7,9 +8,11 @@ interface ProjectCardProps {
     imageAlt: string;
     projectName: string;
     technologies: string[];
+    projectSlugUrl: string;
 }
 
-export function ProjectCard({ coverImage, imageAlt, projectName, technologies }: ProjectCardProps) {
+export function ProjectCard({ coverImage, imageAlt, projectName, technologies, projectSlugUrl }: ProjectCardProps) {
+    const router = useRouter();
     const { isOpen, onToggle } = useDisclosure();
     const isMobileSize = useBreakpointValue({ base: true, md: false });
 
@@ -22,6 +25,7 @@ export function ProjectCard({ coverImage, imageAlt, projectName, technologies }:
             borderRadius={isMobileSize ? 0: 10}
             position="relative"
             cursor="pointer"
+            onClick={() => router.push(`project-details/${projectSlugUrl}`)}
         >
             <Image
                 src={coverImage}

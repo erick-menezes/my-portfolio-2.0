@@ -1,0 +1,19 @@
+{
+    "generalDetails": {
+        "project": "PROJETO",
+        "role": "FUNÇÃO",
+        "duration": "DURAÇÃO",
+        "fullstack": "Desenvolvedor Full Stack",
+        "frontend": "Desenvolvedor Front-End",
+        "backend": "Desenvolvedor Back-End"
+    },
+    "projectDescription": "DESCRIÇÃO DO PROJETO",
+    "goal": "OBJETIVO",
+    "tools&technologies": "FERRAMENTAS/TECNOLOGIAS",
+    "links": {
+        "title": "LINKS",
+        "repository": "REPOSITÓRIO",
+        "site": "SITE",
+        "no-project": "Não há nenhum link para este projeto."
+    }
+}
