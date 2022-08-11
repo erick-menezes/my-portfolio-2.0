@@ -24,13 +24,11 @@ export function SkillsSection() {
 
                 <Flex flexDirection={{ base: 'column', xl: 'row' }} gap={20}>
                     {categories.map((category) => (
-                        <>
-                            <ListSection
-                                key={category.id}
-                                listTitle={t(category.translationObjectName)}
-                                technologyList={technologies.filter((technology) => technology.categoryId === category.id)}
-                            />
-                        </>
+                        <ListSection
+                            key={category.id}
+                            listTitle={t(category.translationObjectName)}
+                            technologyList={technologies.filter((technology) => technology.categoryId === category.id)}
+                        />
                     ))}
                 </Flex>
             </Flex>
