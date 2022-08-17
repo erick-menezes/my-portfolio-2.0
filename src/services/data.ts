@@ -1,3 +1,5 @@
+import { ProjectType } from "interfaces/projects";
+
 export const categories = [
     {
         id: 1,
@@ -198,13 +200,13 @@ export const technologies = [
     },
 ];
 
-export const projects = [
+export const projects: ProjectType[] = [
     {
         id: 1,
         name: "Aluracord",
         slugName: "aluracord",
         role: "fullstack",
-        duration: "--/--",
+        duration: null,
         imagePath: "/assets/images/aluracord.png",
         imageAlt: "Imagem de um projeto realizado durante a Imersão React da Alura chamado Aluracord.",
         descriptionBR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
@@ -213,14 +215,14 @@ export const projects = [
         goalUS: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
         repositoryLink: "https://github.com/erick-menezes/aluracord-game-community",
         appLink: "https://game-community.vercel.app",
-        technologyIds: [26, 6, 3, 27, 28],
+        technologyIds: [1, 2, 3, 26, 6, 3, 27, 24, 28],
     },
     {
         id: 2,
         name: "AluraQuiz",
         slugName: "aluraquiz",
         role: "fullstack",
-        duration: "--/--",
+        duration: null,
         imagePath: "/assets/images/aluraquiz.png",
         imageAlt: "Imagem de um projeto realizado durante a Imersão React da Alura chamado AluraQuiz.",
         descriptionBR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
@@ -229,14 +231,14 @@ export const projects = [
         goalUS: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
         repositoryLink: "https://github.com/erick-menezes/imersao_nextjs",
         appLink: "https://gamequiz-alura.vercel.app",
-        technologyIds: [26, 13, 28],
+        technologyIds: [1, 2, 3, 6, 13, 24, 28],
     },
     {
         id: 3,
         name: "Eriflix",
         slugName: "eriflix",
         role: "fullstack",
-        duration: "--/--",
+        duration: null,
         imagePath: "/assets/images/eriflix.png",
         imageAlt: "Imagem de um projeto realizado durante a Imersão React da Alura chamado Eriflix.",
         descriptionBR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
@@ -245,14 +247,14 @@ export const projects = [
         goalUS: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
         repositoryLink: "https://github.com/erick-menezes/eriflix",
         appLink: "https://eriflix.vercel.app",
-        technologyIds: [28, 11, 13, 29],
+        technologyIds: [1, 2, 3, 5, 28, 11, 13, 24, 29],
     },
     {
         id: 4,
         name: "Check.it",
         slugName: "check-it",
         role: "fullstack",
-        duration: "--/--",
+        duration: null,
         imagePath: "/assets/images/check-it.png",
         imageAlt: "Imagem de um projeto pessoal para listagem de compras chamado Check.it.",
         descriptionBR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
@@ -261,7 +263,7 @@ export const projects = [
         goalUS: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
         repositoryLink: "https://github.com/erick-menezes/check.it",
         appLink: "https://check-it-one.vercel.app",
-        technologyIds: [6, 13, 4, 28],
+        technologyIds: [1, 2, 6, 13, 4, 17, 24, 28],
     },
 ];
 

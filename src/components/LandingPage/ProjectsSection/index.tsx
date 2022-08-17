@@ -8,7 +8,7 @@ import { Icon } from "@iconify/react";
 
 import { SectionTitle } from "components/general/SectionTitle";
 import { ProjectCard } from "./ProjectCard";
-import { getFormattedTechnologyNamesByProject } from "utils/functions";
+import { getTechnologyNames } from "utils/functions";
 
 export function ProjectsSection() {
     const router = useRouter();
@@ -17,13 +17,6 @@ export function ProjectsSection() {
 
     function goToProjectExplorer() {
         router.push('/project-explorer');
-    }
-
-    function getTechnologyNames(technologyIds: number[]) {
-        const projectTechnologies = getFormattedTechnologyNamesByProject({ technologyIds, formatToLowerCase: true });
-        const technologyNames = projectTechnologies.map((technology) => technology.name);
-
-        return technologyNames;
     }
 
     return (
@@ -42,6 +35,7 @@ export function ProjectsSection() {
                 gridTemplateColumns={isMobileSize ? '1fr' : 'repeat(2, 1fr)'}
                 gridTemplateRows={`repeat(${isMobileSize ? '4' : '2'}, 1fr)`}
                 gap={{ base: 10, sm: 10 }}
+                placeItems={isMobileSize ? 'center' : 'initial'}
             >
                 {landingMainProjects.map((project) => (
                     <ProjectCard

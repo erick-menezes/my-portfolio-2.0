@@ -1,0 +1,10 @@
+{
+    "pageTitle": "Project Explorer",
+    "searchButton": "Search",
+    "searchPlaceholder": "Search project",
+    "selectPlaceholder": "All technologies",
+    "noProjectMatched": "No project found.",
+    "allTechnologiesOption": "All technologies",
+    "technologySelectionPlaceholder": "Select a technology",
+    "noTechnologySearchAlert": "Select a technology to search."
+}

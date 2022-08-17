@@ -1,0 +1,10 @@
+{
+    "pageTitle": "Explorador de projetos",
+    "searchButton": "Pesquisar",
+    "searchPlaceholder": "Procurar projeto",
+    "selectPlaceholder": "Todas as tecnologias",
+    "noProjectMatched": "Nenhum projeto encontrado.",
+    "allTechnologiesOption": "Todas as tecnologias",
+    "technologySelectionPlaceholder": "Selecione uma tecnologia",
+    "noTechnologySearchAlert": "Selecione uma tecnologia para procurar."
+}

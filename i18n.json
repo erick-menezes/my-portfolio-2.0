@@ -4,6 +4,7 @@
     "pages": {
         "*": ["header", "footer"],
         "/": ["landing"],
-        "/project-details/[project]": ["project-details"]
+        "/project-details/[project]": ["project-details"],
+        "/project-explorer": ["project-explorer"]
     }
 }

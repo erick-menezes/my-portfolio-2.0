@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 interface GeneralDetailsSectionProps {
     name: string;
     role: string;
-    duration: string;
+    duration: string | null;
 }
 
 export function GeneralDetailsSection({ name, role, duration }: GeneralDetailsSectionProps) {
@@ -46,7 +46,7 @@ export function GeneralDetailsSection({ name, role, duration }: GeneralDetailsSe
                 />
 
                 <Text fontSize="lg" fontWeight="700">{t('generalDetails.duration')}:</Text>
-                <Text fontSize="lg">{duration}</Text>
+                <Text fontSize="lg">{duration ?? "--/--"}</Text>
             </Flex>
         </Flex>
     );

@@ -14,15 +14,17 @@ interface ProjectCardProps {
 export function ProjectCard({ coverImage, imageAlt, projectName, technologies, projectSlugUrl }: ProjectCardProps) {
     const router = useRouter();
     const { isOpen, onToggle } = useDisclosure();
-    const isMobileSize = useBreakpointValue({ base: true, md: false });
+    const isMobile = useBreakpointValue({ base: true, md: false });
+    const imageWidth = useBreakpointValue({ base: 375, md: 800 });
+    const imageHeight = useBreakpointValue({ base: 200, md: 400 });
 
     return (
         <GridItem
             onMouseEnter={onToggle}
             onMouseLeave={onToggle}
-            width="100%"
-            colSpan={isMobileSize ? 2 : 1}
-            borderRadius={isMobileSize ? 0: 10}
+            width={isMobile ? 375 : "100%"}
+            colSpan={{ base: 2, md: 1 }}
+            borderRadius={{ base: 0, md: 10 }}
             position="relative"
             cursor="pointer"
             onClick={() => router.push(`project-details/${projectSlugUrl}`)}
@@ -30,9 +32,9 @@ export function ProjectCard({ coverImage, imageAlt, projectName, technologies, p
             <Image
                 src={coverImage}
                 alt={imageAlt}
-                width={800}
-                height={400}
-                style={{ borderRadius: isMobileSize ? 0 : 10 }}
+                width={imageWidth}
+                height={imageHeight}
+                style={{ borderRadius: isMobile ? 0 : 10 }}
             />
             <SlideFade
                 style={{
@@ -46,7 +48,7 @@ export function ProjectCard({ coverImage, imageAlt, projectName, technologies, p
                 offsetY='0px'
             >
                 <Flex
-                    borderRadius={isMobileSize ? 0 : 10}
+                    borderRadius={{ base: 0, md: 10 }}
                     background="rgba(0, 0, 0, 0.9)"
                     height="100%"
                     width="100%"
@@ -55,7 +57,7 @@ export function ProjectCard({ coverImage, imageAlt, projectName, technologies, p
                     flexDirection="column"
                 >
                     <Text fontSize="4xl" color="app-secondary-light">{projectName}</Text>
-                    <Text color="app-secondary-dark.400">{technologies.join(', ')}</Text>
+                    <Text color="app-secondary-dark.400">{technologies.join(', ')}...</Text>
                 </Flex>
             </SlideFade >
         </GridItem>

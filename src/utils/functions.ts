@@ -14,3 +14,10 @@ export function getFormattedTechnologyNamesByProject({ technologyIds, formatToLo
 
     return technologyNames;
 }
+
+export function getTechnologyNames(technologyIds: number[]) {
+    const projectTechnologies = getFormattedTechnologyNamesByProject({ technologyIds, formatToLowerCase: true });
+    const technologyNames = projectTechnologies.map((technology) => technology.name);
+
+    return technologyNames.splice(0, 4);
+}

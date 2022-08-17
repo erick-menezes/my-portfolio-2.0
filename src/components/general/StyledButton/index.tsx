@@ -4,9 +4,12 @@ import { Icon } from "@iconify/react";
 interface StyledButtonProps extends FlexProps {
     text: string;
     iconName?: string;
+    height?: number;
+    width?: number;
+    type?: string;
 }
 
-export function StyledButton({ text, iconName, ...rest }: StyledButtonProps) {
+export function StyledButton({ width, height, text, iconName, type, ...rest }: StyledButtonProps) {
     const isMobileSize = useBreakpointValue({ base: true, lg: false });
     const buttonWidthSize = useBreakpointValue({ base: 60, sm: 52, md: 52, lg: 48 });
     const buttonHeightSize = useBreakpointValue({ base: 20, sm: 16, md: 16, lg: 16 });
@@ -14,8 +17,9 @@ export function StyledButton({ text, iconName, ...rest }: StyledButtonProps) {
     return (
         <Flex
             as="button"
-            width={buttonWidthSize}
-            height={buttonHeightSize}
+            type={type ?? "button"}
+            width={width ?? buttonWidthSize}
+            height={height ?? buttonHeightSize}
             background="app-primary"
             alignItems="center"
             alignSelf={isMobileSize ? 'center' : 'start'}
