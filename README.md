@@ -5,16 +5,11 @@
 
 ## Technologies
 
-### Front-End:
 - HTML, CSS and JavaScript/TypeScript
 - Sass
 - Chakra UI
 - ReactJS
 - NextJS
-
-### Back-End:
-- JavaScript
-- MirageJS
 
 ## Production implementation
 
