@@ -3,10 +3,11 @@ import { Flex, Text, Tooltip } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 
 export type TechnologyType = {
-    id: number,
-    name: string,
-    categoryId: number,
-    iconName: string,
+    id: number;
+    name: string;
+    categoryId: number;
+    iconName: string;
+    size?: number;
 }
 
 interface ListSectionProps {
@@ -30,7 +31,7 @@ export function ListSection({ listTitle, technologyList }: ListSectionProps) {
                         <Tooltip key={tech.id} label={tech.name}>
                             <Icon
                                 icon={tech.iconName}
-                                fontSize={40}
+                                fontSize={tech.size ?? 40}
                                 style={{ cursor: 'pointer' }}
                             />
                         </Tooltip>

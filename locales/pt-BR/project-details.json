@@ -5,7 +5,8 @@
         "duration": "DURAÇÃO",
         "fullstack": "Desenvolvedor Full Stack",
         "frontend": "Desenvolvedor Front-End",
-        "backend": "Desenvolvedor Back-End"
+        "backend": "Desenvolvedor Back-End",
+        "unfinished": "Projeto incompleto"
     },
     "projectDescription": "DESCRIÇÃO DO PROJETO",
     "goal": "OBJETIVO",

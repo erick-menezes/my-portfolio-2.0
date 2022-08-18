@@ -3,7 +3,9 @@ export interface ProjectType {
     name: string;
     slugName: string;
     role: string;
-    duration: string | null;
+    startDate: string | null;
+    endDate: string | null;
+    finished: boolean;
     imagePath: string;
     imageAlt: string;
     descriptionBR: string;

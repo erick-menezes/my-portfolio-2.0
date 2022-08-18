@@ -33,9 +33,11 @@ export default function ProjectDetails() {
                 paddingRight={{ base: 8, lg: "5rem", xl: "8rem", "2xl": "15rem" }}
             >
                 <GeneralDetailsSection
-                    duration={projectDetailsData.duration}
+                    startDate={projectDetailsData.startDate}
+                    endDate={projectDetailsData.endDate}
                     name={projectDetailsData.name}
                     role={projectDetailsData.role}
+                    finished={projectDetailsData.finished}
                 />
 
                 <ProjectDescriptionSection

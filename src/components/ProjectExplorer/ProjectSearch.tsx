@@ -89,7 +89,7 @@ export function ProjectSearch({ setFilteredProjects }: ProjectSearchProps) {
         let allProjects = [...projects];
 
         if (isNameSearched) {
-            allProjects = allProjects.filter((project) => project.name.toLocaleLowerCase().match(projectFilter.name.trim().toLocaleLowerCase()));
+            allProjects = allProjects.filter((project) => project.name.toLowerCase().match(projectFilter.name.trim().toLowerCase()));
         }
 
         if (isTechnologiesSearched) {

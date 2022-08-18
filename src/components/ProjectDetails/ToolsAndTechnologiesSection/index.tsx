@@ -31,7 +31,7 @@ export function ToolsAndTechnologiesSection({ technologyIds }: ToolsAndTechnolog
                     <Flex key={technology.id} alignItems="center" justifyContent="center" columnGap={5}>
                         <Icon
                             icon={technology.iconName}
-                            fontSize={isMobileSize ? 30 : 40}
+                            fontSize={isMobileSize ? (technology.size ?? 30) : (technology.size ?? 40)}
                         />
                         <Text fontSize="2xl">{technology.name}</Text>
                     </Flex>

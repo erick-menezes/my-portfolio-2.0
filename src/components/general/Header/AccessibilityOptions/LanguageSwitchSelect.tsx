@@ -59,27 +59,24 @@ export function LanguageSwitchSelect({ languages, onClose, onChangeLanguage, lan
         >
             <List width="100%">
                 {languages.map((language, index) => (
-                    <>
-                        <ListItem
-                            padding="1rem 0 1rem 1rem"
-                            width="100%"
-                            display="flex"
-                            alignItems="center"
-                            columnGap={3}
-                            key={index}
-                            onClick={() => onChangeLanguage(language.abbreviation)}
-                            _hover={{
-                                background: selectColorStyle.backgroundOnHover,
-                            }}
-                        >
-                            <Icon
-                                icon={language.icon}
-                                fontSize={25}
-                            />
-                            {language.name}
-                        </ListItem>
-                    </>
-
+                    <ListItem
+                        padding="1rem 0 1rem 1rem"
+                        width="100%"
+                        display="flex"
+                        alignItems="center"
+                        columnGap={3}
+                        key={index}
+                        onClick={() => onChangeLanguage(language.abbreviation)}
+                        _hover={{
+                            background: selectColorStyle.backgroundOnHover,
+                        }}
+                    >
+                        <Icon
+                            icon={language.icon}
+                            fontSize={25}
+                        />
+                        {language.name}
+                    </ListItem>
                 ))}
             </List>
         </Flex>

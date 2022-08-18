@@ -1,17 +1,53 @@
 import useTranslation from "next-translate/useTranslation";
 
+import moment from 'moment';
+
 import { Flex, Text } from "@chakra-ui/react";
 
 import { Icon } from "@iconify/react";
 
+import "moment/locale/pt-br";
+import "moment/locale/en-au";
+
 interface GeneralDetailsSectionProps {
     name: string;
     role: string;
-    duration: string | null;
+    startDate: string | null;
+    endDate: string | null;
+    finished: boolean;
 }
 
-export function GeneralDetailsSection({ name, role, duration }: GeneralDetailsSectionProps) {
-    const { t } = useTranslation('project-details');
+export function GeneralDetailsSection({ name, role, startDate, endDate, finished }: GeneralDetailsSectionProps) {
+    const { t, lang } = useTranslation('project-details');
+
+    function getStartAndEndDurationInformation(startDateString: string | null, endDateString: string | null) {
+        if (!startDateString) {
+            return '--/--';
+        }
+
+        const startDateFormatted = getLocaleDate(startDateString);
+        const endDateFormatted = getLocaleDate(endDateString);
+
+        if (!endDateString || startDateFormatted === endDateFormatted) {
+            return startDateFormatted! + (!finished ? " (" + t('generalDetails.unfinished') + ")" : "");
+        }
+
+        const dateInformation = startDateFormatted + ` - ${endDateFormatted}` + (!finished ? " (" + t('generalDetails.unfinished') + ")" : "");
+
+        return dateInformation;
+    }
+
+    function getLocaleDate(dateString: string | null) {
+        const localeMomentDate = moment(dateString).locale(lang === 'pt-BR' ? 'pt-br' : 'en-au');
+
+        if (!localeMomentDate.isValid()) {
+            return dateString;
+        }
+
+        const dateFormatted = localeMomentDate.format('MMM/YYYY');
+
+        return dateFormatted[0].toUpperCase() + dateFormatted.split('').splice(1).join('');
+    }
 
     return (
         <Flex
@@ -46,7 +82,9 @@ export function GeneralDetailsSection({ name, role, duration }: GeneralDetailsSe
                 />
 
                 <Text fontSize="lg" fontWeight="700">{t('generalDetails.duration')}:</Text>
-                <Text fontSize="lg">{duration ?? "--/--"}</Text>
+                <Text fontSize="lg">
+                    {getStartAndEndDurationInformation(startDate, endDate)}
+                </Text>
             </Flex>
         </Flex>
     );
