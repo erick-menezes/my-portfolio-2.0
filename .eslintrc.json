@@ -29,6 +29,7 @@
         "max-len": "off",
         "no-unused-vars": 1,
         "no-inline-styles": "off",
-        "quote-props": "off"
+        "quote-props": "off",
+        "react/display-name": "off"
     }
 }

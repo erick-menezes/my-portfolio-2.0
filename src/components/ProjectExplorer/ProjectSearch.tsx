@@ -93,7 +93,7 @@ export function ProjectSearch({ setFilteredProjects }: ProjectSearchProps) {
         }
 
         if (isTechnologiesSearched) {
-            allProjects = allProjects.filter((project) => project.technologyIds.some((id) => projectFilter.technologies.includes(id)));
+            allProjects = allProjects.filter((project) => project.technologyIds.some((id) => projectFilter.technologies.includes(id)) || projectFilter.technologies.includes(0));
         }
 
         setFilteredProjects([...allProjects]);

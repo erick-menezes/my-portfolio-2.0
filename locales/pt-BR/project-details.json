@@ -6,7 +6,8 @@
         "fullstack": "Desenvolvedor Full Stack",
         "frontend": "Desenvolvedor Front-End",
         "backend": "Desenvolvedor Back-End",
-        "unfinished": "Projeto incompleto"
+        "unfinished": "Projeto incompleto",
+        "inProgress": "Projeto em andamento"
     },
     "projectDescription": "DESCRIÇÃO DO PROJETO",
     "goal": "OBJETIVO",

@@ -28,11 +28,11 @@ export function GeneralDetailsSection({ name, role, startDate, endDate, finished
         const startDateFormatted = getLocaleDate(startDateString);
         const endDateFormatted = getLocaleDate(endDateString);
 
-        if (!endDateString || startDateFormatted === endDateFormatted) {
-            return startDateFormatted! + (!finished ? " (" + t('generalDetails.unfinished') + ")" : "");
+        if (!endDateString) {
+            return `${startDateFormatted} (${finished ? t('generalDetails.unfinished') : t('generalDetails.inProgress')})`;
         }
 
-        const dateInformation = startDateFormatted + ` - ${endDateFormatted}` + (!finished ? " (" + t('generalDetails.unfinished') + ")" : "");
+        const dateInformation = `${startDateFormatted} - ${endDateFormatted}`;
 
         return dateInformation;
     }

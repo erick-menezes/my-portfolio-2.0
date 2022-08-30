@@ -5,7 +5,7 @@ import { getFormattedTechnologyNamesByProject } from "utils/functions";
 import { Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { SectionTitle } from "components/general/SectionTitle";
 
-import { Icon } from "@iconify/react";
+import { IconComponent } from "components/general/IconComponent";
 
 interface ToolsAndTechnologiesSectionProps {
     technologyIds: number[];
@@ -29,9 +29,9 @@ export function ToolsAndTechnologiesSection({ technologyIds }: ToolsAndTechnolog
             <Flex justifyContent="center" wrap="wrap" gap={10} paddingTop={5}>
                 {projectTechnologyNames.map((technology) => (
                     <Flex key={technology.id} alignItems="center" justifyContent="center" columnGap={5}>
-                        <Icon
-                            icon={technology.iconName}
-                            fontSize={isMobileSize ? (technology.size ?? 30) : (technology.size ?? 40)}
+                        <IconComponent
+                            iconName={technology.iconName}
+                            size={technology.size || isMobileSize ? 30 : 40}
                         />
                         <Text fontSize="2xl">{technology.name}</Text>
                     </Flex>
