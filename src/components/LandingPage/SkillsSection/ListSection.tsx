@@ -1,5 +1,5 @@
 
-import { Flex, Text, Tooltip } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { IconComponent } from "components/general/IconComponent";
 
 export type TechnologyType = {
@@ -28,12 +28,12 @@ export function ListSection({ listTitle, technologyList }: ListSectionProps) {
             <Flex justifyContent="center" wrap="wrap" gap={10}>
                 {technologyList?.length > 0 && (
                     technologyList.map((tech) => (
-                        <Tooltip key={tech.id} label={tech.name}>
-                            <IconComponent
-                                iconName={tech.iconName}
-                                size={tech.size}
-                            />
-                        </Tooltip>
+                        <IconComponent
+                            key={tech.id}
+                            iconName={tech.iconName}
+                            tooltipLabel={tech.name}
+                            size={tech.size}
+                        />
                     ))
                 )}
             </Flex>

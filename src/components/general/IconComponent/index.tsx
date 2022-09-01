@@ -1,30 +1,34 @@
-import { Box } from "@chakra-ui/react";
+import React from "react";
+
+import { Tooltip } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import React from "react";
 
 interface IconComponentProps {
     iconName: string;
     size?: number;
+    tooltipLabel?: string;
 }
 
-export const IconComponent = React.forwardRef(({ iconName, size }: IconComponentProps, ref) => {
+export const IconComponent = React.forwardRef<any, IconComponentProps>(({ iconName, size, tooltipLabel }, ref) => {
     return (
         iconName.endsWith('.svg') ? (
-            <Box>
+            <Tooltip label={tooltipLabel}>
                 <Image
                     src={`/assets/icons/${iconName}`}
                     width={size ?? 40}
                     height={size ?? 40}
                     style={{ cursor: 'pointer' }}
                 />
-            </Box>
+            </Tooltip>
         ) : (
-            <Icon
-                icon={iconName}
-                fontSize={size ?? 40}
-                style={{ cursor: 'pointer' }}
-            />
+            <Tooltip label={tooltipLabel}>
+                <Icon
+                    icon={iconName}
+                    fontSize={size ?? 40}
+                    style={{ cursor: 'pointer' }}
+                />
+            </Tooltip>
         )
     );
 });

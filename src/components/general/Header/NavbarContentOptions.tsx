@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import useTranslation from 'next-translate/useTranslation';
 
-import { Flex, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, useBreakpointValue, useColorMode } from "@chakra-ui/react";
 
 import { NavbarContentLink } from "./NavbarContentLink";
 
@@ -15,7 +15,8 @@ type MenuOptionType = {
 export function NavbarContentOptions() {
     const router = useRouter();
     const isMobileSize = useBreakpointValue({ base: true, lg: false });
-    const { t } = useTranslation('header');
+    const { t, lang } = useTranslation('header');
+    const { colorMode } = useColorMode();
 
     const menuOptions: MenuOptionType[] = [
         {
@@ -39,7 +40,7 @@ export function NavbarContentOptions() {
             optionName: t('menuOptions.skillsOption'),
         },
         {
-            navigateTo: "/files/resume.pdf",
+            navigateTo: `/files/resume_${lang === 'pt-BR' ? 'pt_br' : 'en_us'}_${colorMode === 'light' ? 'light' : 'dark'}.pdf`,
             externalLink: true,
             optionName: t('menuOptions.resumeOption'),
         },

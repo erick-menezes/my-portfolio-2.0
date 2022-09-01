@@ -1,14 +1,15 @@
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
-import { Box, Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, useBreakpointValue, useColorMode } from "@chakra-ui/react";
 
 import { StyledButton } from "../general/StyledButton";
 
 import SelfImage from 'assets/images/me.jpg';
 
 export function LandingCover() {
-    const { t } = useTranslation('landing');
+    const { t, lang } = useTranslation('landing');
+    const { colorMode } = useColorMode();
     const isMobileSize = useBreakpointValue({ base: true, lg: false });
     const columnGapSize = useBreakpointValue({ base: 0, lg: 28, xl: 80 });
 
@@ -42,7 +43,12 @@ export function LandingCover() {
                     <span style={{ color: '#FD2A2A', fontSize: '1.2rem' }}>{t('landingCover.span2')}.</span>
                 </Heading>
 
-                <a href="/files/resume.pdf" target="_blank" style={{ width: "fit-content", alignSelf: isMobileSize ? "center" : "inherit" }}>
+                <a
+                    href={`/files/resume_${lang === 'pt-BR' ? 'pt_br' : 'en_us'}_${colorMode === 'light' ? 'light' : 'dark'}.pdf`}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ width: "fit-content", alignSelf: isMobileSize ? "center" : "inherit" }}
+                >
                     <StyledButton
                         text={t('landingCover.resumeButtonText')}
                         iconName="carbon:document"
