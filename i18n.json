@@ -2,7 +2,7 @@
     "locales": ["en-US", "pt-BR"],
     "defaultLocale": "pt-BR",
     "pages": {
-        "*": ["header", "footer"],
+        "*": ["header", "footer", "general"],
         "/": ["landing"],
         "/project-details/[project]": ["project-details"],
         "/project-explorer": ["project-explorer"]

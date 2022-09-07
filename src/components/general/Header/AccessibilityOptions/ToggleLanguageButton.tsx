@@ -9,6 +9,7 @@ import { Flex, useDisclosure } from "@chakra-ui/react";
 import { Icon } from '@iconify/react';
 
 import { LanguageSwitchSelect } from "./LanguageSwitchSelect";
+import { useRouter } from "next/router";
 
 type availableLanguages = "pt-BR" | "en-US";
 
@@ -22,6 +23,7 @@ interface ToggleLanguageButtonProps {
 }
 
 export function ToggleLanguageButton({ selectPosition }: ToggleLanguageButtonProps) {
+    const router = useRouter();
     const { t, lang } = useTranslation('header') as LanguageType;
     const { isOpen, onClose, onToggle } = useDisclosure();
     const languageSelectRef = useRef<HTMLDivElement | null>(null);
@@ -45,6 +47,10 @@ export function ToggleLanguageButton({ selectPosition }: ToggleLanguageButtonPro
     ];
 
     async function handleChangeLanguage(language: string) {
+        if (router.pathname === '/') {
+            router.push('/');
+        }
+
         await setLanguage(language);
     }
 

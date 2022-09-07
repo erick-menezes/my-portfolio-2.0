@@ -7,6 +7,7 @@ import { Header } from 'components/general/Header/Header';
 import { Footer } from 'components/general/Footer';
 
 import '../styles/globals.scss';
+import { ScrollTopButton } from 'components/general/ScrollTopButton';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Header />
         <Component {...pageProps} />
         <Footer />
+        <ScrollTopButton />
     </ChakraProvider>
   );
 }
