@@ -17,5 +17,9 @@
         "repository": "REPOSITÓRIO",
         "site": "SITE",
         "no-project": "Não há nenhum link para este projeto."
+    },
+    "navigationButtons": {
+        "leftButton": "Projeto anterior",
+        "rightButton": "Próximo projeto"
     }
 }

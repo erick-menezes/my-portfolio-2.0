@@ -9,6 +9,7 @@ import { ProjectDescriptionSection } from "components/ProjectDetails/ProjectDesc
 import { GoalSection } from "components/ProjectDetails/GoalSection";
 import { Box, Flex } from "@chakra-ui/react";
 import { LinkSection } from "components/ProjectDetails/LinkSection";
+import { ProjectNavigationButtons } from "components/ProjectDetails/ProjectNavigationButtons";
 
 export default function ProjectDetails() {
     const router = useRouter();
@@ -53,6 +54,8 @@ export default function ProjectDetails() {
                 <ToolsAndTechnologiesSection technologyIds={projectDetailsData.technologyIds} />
 
                 <LinkSection repository={projectDetailsData.repositoryLink} site={projectDetailsData.appLink} />
+
+                <ProjectNavigationButtons currentProjectId={projectDetailsData.id} />
             </Flex>
         </Flex>
     );

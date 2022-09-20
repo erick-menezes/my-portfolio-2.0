@@ -39,12 +39,13 @@ export function ScrollTopButton() {
             justifyContent="center"
             columnGap={3}
             textDecoration="none"
+            borderRadius={1}
         >
             <Text fontSize="lg">{t('scrollToTop')}</Text>
 
             <Icon
                 icon="ep:arrow-up"
-                fontSize={45}
+                fontSize={34}
             />
         </Button>
     );
