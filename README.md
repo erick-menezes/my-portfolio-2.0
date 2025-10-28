@@ -6,10 +6,10 @@
 ## Technologies
 
 - HTML, CSS and JavaScript/TypeScript
-- Sass
-- Chakra UI
 - ReactJS
 - NextJS
+- TailwindCSS
+- shadcn-ui
 
 ## Production implementation
 
